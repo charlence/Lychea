@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scenario xmlns="http://www.omnigroup.com/namespace/OmniPlan/v2" xmlns:opns="http://www.omnigroup.com/namespace/OmniPlan/v2" id="l9KgjW_u6NT">
+  <start-date>2018-07-28T16:00:00.000Z</start-date>
+  <prototype-task>
+    <task id="t-2">
+      <title>Task 1</title>
+      <effort>28800</effort>
+    </task>
+  </prototype-task>
+  <prototype-task>
+    <task id="t-3">
+      <title>Milestone 1</title>
+      <type>milestone</type>
+    </task>
+  </prototype-task>
+  <prototype-task>
+    <task id="t-4">
+      <title>Group 1</title>
+      <type>group</type>
+    </task>
+  </prototype-task>
+  <prototype-resource>
+    <resource id="r-2">
+      <name>Resource 1</name>
+      <type>Staff</type>
+    </resource>
+  </prototype-resource>
+  <prototype-resource>
+    <resource id="r-3">
+      <name>Equipment 1</name>
+      <type>Equipment</type>
+    </resource>
+  </prototype-resource>
+  <prototype-resource>
+    <resource id="r-4">
+      <name>Material 1</name>
+      <type>Material</type>
+      <units-available>0</units-available>
+      <efficiency>0</efficiency>
+    </resource>
+  </prototype-resource>
+  <prototype-resource>
+    <resource id="r-5">
+      <name>Group 1</name>
+      <type>Group</type>
+    </resource>
+  </prototype-resource>
+  <top-resource idref="r-1"/>
+  <resource id="r-1">
+    <name/>
+    <type>Group</type>
+    <child-resource idref="r1"/>
+  </resource>
+  <resource id="r1">
+    <name>Resource 1</name>
+    <type>Staff</type>
+  </resource>
+  <top-task idref="t-1"/>
+  <task id="t-1">
+    <type>group</type>
+    <child-task idref="t3"/>
+    <child-task idref="t4"/>
+    <child-task idref="t16"/>
+    <child-task idref="t24"/>
+    <child-task idref="t30"/>
+    <child-task idref="t31"/>
+    <child-task idref="t33"/>
+  </task>
+  <task id="t3">
+    <title>添加小主</title>
+    <effort>57600</effort>
+    <start-constraint-date>2018-08-05T00:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2018-08-05T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t4">
+    <title>发布流程</title>
+    <type>group</type>
+    <child-task idref="t8"/>
+    <child-task idref="t10"/>
+    <child-task idref="t11"/>
+    <child-task idref="t12"/>
+    <child-task idref="t13"/>
+    <child-task idref="t14"/>
+  </task>
+  <task id="t8">
+    <title>无小主卡数据-新增</title>
+    <effort>28800</effort>
+    <start-constraint-date>2018-08-07T00:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2018-08-07T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t10">
+    <title>选择小主卡</title>
+    <effort>28800</effort>
+    <start-constraint-date>2018-08-07T00:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2018-08-07T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t11">
+    <title>选择主题</title>
+    <effort>28800</effort>
+    <start-constraint-date>2018-08-07T00:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2018-08-07T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t12">
+    <title>主题-必填表单</title>
+    <effort>28800</effort>
+    <start-constraint-date>2018-08-08T00:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2018-08-08T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t13">
+    <title>主题-日志</title>
+    <effort>28800</effort>
+    <start-constraint-date>2018-08-09T00:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2018-08-09T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t14">
+    <title>主题-照片</title>
+    <effort>28800</effort>
+    <start-constraint-date>2018-08-09T00:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2018-08-09T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t16">
+    <title>Post相关</title>
+    <type>group</type>
+    <start-constraint-date>2018-08-13T00:00:00.000Z</start-constraint-date>
+    <child-task idref="t20"/>
+    <child-task idref="t21"/>
+    <child-task idref="t22"/>
+    <child-task idref="t23"/>
+    <start-no-earlier-than>2018-08-13T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t20">
+    <title>详情展示</title>
+    <effort>28800</effort>
+    <start-constraint-date>2018-08-13T00:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2018-08-13T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t21">
+    <title>评论</title>
+    <effort>28800</effort>
+    <start-constraint-date>2018-08-13T00:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2018-08-13T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t22">
+    <title>点赞</title>
+    <effort>28800</effort>
+    <start-constraint-date>2018-08-13T00:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2018-08-13T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t23">
+    <title>分享</title>
+    <effort>28800</effort>
+    <start-constraint-date>2018-08-13T00:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2018-08-13T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t24">
+    <title>小主卡</title>
+    <type>group</type>
+    <start-constraint-date>2018-08-13T00:00:00.000Z</start-constraint-date>
+    <child-task idref="t25"/>
+    <child-task idref="t26"/>
+    <child-task idref="t27"/>
+    <child-task idref="t29"/>
+    <child-task idref="t34"/>
+    <child-task idref="t35"/>
+    <child-task idref="t36"/>
+    <start-no-earlier-than>2018-08-13T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t25">
+    <title>小主卡详情页</title>
+    <effort>57600</effort>
+    <start-constraint-date>2018-08-14T00:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2018-08-14T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t26">
+    <title>铲屎官的小主卡列表</title>
+    <effort>28800</effort>
+    <start-constraint-date>2018-08-14T00:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2018-08-14T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t27">
+    <title>铲屎官收藏的小主卡</title>
+    <effort>28800</effort>
+    <start-constraint-date>2018-08-14T00:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2018-08-14T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t29">
+    <title>添加家族成员</title>
+    <effort>28800</effort>
+    <start-constraint-date>2018-08-18T00:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2018-08-18T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t30">
+    <title>搜索</title>
+    <effort>57600</effort>
+    <start-constraint-date>2018-08-16T00:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2018-08-16T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t31">
+    <title>我的</title>
+    <effort>86400</effort>
+    <start-constraint-date>2018-08-20T00:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2018-08-20T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t33">
+    <title>榜单</title>
+    <effort>28800</effort>
+    <start-constraint-date>2018-08-13T00:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2018-08-13T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t34">
+    <title>终生宠爱承诺</title>
+    <effort>28800</effort>
+    <start-constraint-date>2018-08-17T00:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2018-08-17T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t35">
+    <title>宣誓页</title>
+    <effort>28800</effort>
+    <start-constraint-date>2018-08-17T00:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2018-08-17T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <task id="t36">
+    <title>Task 1</title>
+    <effort>28800</effort>
+    <start-constraint-date>2018-08-16T00:00:00.000Z</start-constraint-date>
+    <start-no-earlier-than>2018-08-16T00:00:00.000Z</start-no-earlier-than>
+  </task>
+  <critical-path root="-1" enabled="false" resources="false">
+    <color space="srgb" r="1" g="0.5" b="0.5"/>
+  </critical-path>
+</scenario>

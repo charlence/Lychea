@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<changelog xmlns="http://www.omnigroup.com/namespace/OmniPlan/v2">
+  <version>2.1</version>
+  <task-change-set user="Charlence" date="2018-08-13T02:34:00.744Z" timestamp="2018-08-13T02:34:00.744Z">
+    <change idref="t29" to="t24" to-position="3">
+      <change idref="t29" attribute="noEarlierThanConstraintDate" type="date" to="2018-08-16T00:00:00.000Z"/>
+      <change idref="t29" attribute="title" type="string" to="添加家族成员"/>
+    </change>
+  </task-change-set>
+  <task-change-set user="Charlence" date="2018-08-16T14:00:19.565Z" timestamp="2018-08-16T14:00:19.565Z">
+    <change idref="t34" to="t24" to-position="4">
+      <change idref="t34" attribute="noEarlierThanConstraintDate" type="date" to="2018-08-17T00:00:00.000Z"/>
+      <change idref="t34" attribute="title" type="string" to="终生宠爱承诺"/>
+    </change>
+    <change idref="t35" to="t24" to-position="5">
+      <change idref="t35" attribute="noEarlierThanConstraintDate" type="date" to="2018-08-17T00:00:00.000Z"/>
+      <change idref="t35" attribute="title" type="string" to="宣誓页"/>
+    </change>
+    <change idref="t36" to="t24" to-position="6">
+      <change idref="t36" attribute="noEarlierThanConstraintDate" type="date" to="2018-08-16T00:00:00.000Z"/>
+      <change idref="t36" attribute="title" type="string" to="Task 1"/>
+    </change>
+    <change idref="t29" attribute="noEarlierThanConstraintDate" type="date" from="2018-08-16T00:00:00.000Z" to="2018-08-18T00:00:00.000Z"/>
+    <change idref="t31" attribute="effort" type="real" from="28800" to="86400"/>
+    <change idref="t31" attribute="noEarlierThanConstraintDate" type="date" from="2018-08-13T00:00:00.000Z" to="2018-08-20T00:00:00.000Z"/>
+  </task-change-set>
+</changelog>
