@@ -152,6 +152,14 @@ export default {
     init () {
       this.setCustomNavBar()
     },
+    // 拉取初始化列表数据
+    fetchList () {
+      if (this.urlParams.showlist === 'pet') {
+        this.petCardList.currentList = 1
+      } else {
+        this.petCardList.currentList = 2
+      }
+    },
     // 适配不同机型，设置自定义导航高度
     setCustomNavBar () {
       let tempObj = utils.setCustomNavBar()
@@ -174,9 +182,14 @@ export default {
 
   },
   onLoad () {
-
+    let urlParams = this.$root.$mp.query
+    this.urlParams = urlParams
+    console.log('onload时，urlParams===', this.urlParams)
   },
   onShow () {
+    let urlParams = this.$root.$mp.query
+    this.urlParams = urlParams
+    console.log('onload时，urlParams===', this.urlParams)
     this.init()
   }
 }

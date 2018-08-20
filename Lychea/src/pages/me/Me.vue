@@ -31,13 +31,13 @@
     <!-- begin user-extra-info -->
     <div class="user-extra-info">
       <div class="item"
-        @click="goToPetList"
+        @click="viewPage('pets')"
       >
         <span class="item-num">9</span>
         <span>小主卡</span>
       </div>
       <div class="item"
-        @click="goToPetList"
+        @click="viewPage('favorite')"
       >
         <span class="item-num">8</span>
         <span>已关注</span>
@@ -53,7 +53,7 @@
     <!-- begin log-category -->
     <div class="log-category">
       <div class="item"
-        @click="viewPage('replies')"
+        @click="viewPage('msgList')"
       >
         <img src="../../../static/img/icon/mine_msg_w88_h88_1x.png">
         <span>消息</span>
@@ -80,35 +80,45 @@
     <!-- end log-category  -->
     <!-- begin lychea-notice -->
     <div class="lychea-notice">
-      <dl class="item">
+      <dl class="item"
+        @click="viewPage('exchanges')"
+      >
         <dt><img src="../../../static/img/icon/my_exchange_w60_h60_1x.png"></dt>
         <dd>
           兑换记录
           <span></span>
         </dd>
       </dl>
-      <dl class="item">
+      <dl class="item"
+        @click="viewPage('faq')"
+      >
         <dt><img src="../../../static/img/icon/my_faq_w60_h60_1x.png"></dt>
         <dd>
           常见问题
           <span></span>
         </dd>
       </dl>
-      <dl class="item">
+      <dl class="item"
+        @click="viewPage('contact')"
+      >
         <dt><img src="../../../static/img/icon/my_contact_w60_h60_1x.png"></dt>
         <dd>
           联系我们
           <span></span>
         </dd>
       </dl>
-      <dl class="item">
+      <dl class="item"
+        @click="viewPage('about')"
+      >
         <dt><img src="../../../static/img/icon/my_about_us_w60_h60_1x.png"></dt>
         <dd>
           关于来吱宠
           <span></span>
         </dd>
       </dl>
-      <dl class="item">
+      <dl class="item"
+        @click="viewPage('set')"
+      >
         <dt><img src="../../../static/img/icon/my_set_w60_h60_1x.png"></dt>
         <dd>
           设置
@@ -153,37 +163,78 @@ export default {
     // viewPage 查看页面，视参数不同
     viewPage (param) {
       switch (param) {
+        case 'pets':
+          // 小主卡列表
+          console.log('跳转小主卡列表之前')
+          wx.switchTab({
+            url: '/pages/petCardList/main?showlist=pets'
+          })
+          break
+        case 'favorite':
+          // 已关注（关注列表）
+          wx.switchTab({
+            url: '/pages/petCardList/main?showlist=favorite'
+          })
+          break
         case 'points':
           // 进入积分
           wx.navigateTo({
-            url: '/pages/points/main'
+            url: '/pages/pointList/main'
           })
           break
-        case 'replies':
+        case 'msgList':
           // 进入消息，他人回复列表
           wx.navigateTo({
-            url: '/pages/points/main'
+            url: '/pages/msgList/main'
           })
           break
         case 'posts':
           // 进入本人的日志列表
           wx.navigateTo({
-            url: '/pages/points/main'
+            url: '/pages/postList/main'
           })
           break
         case 'comments':
           // 进入本人的评论列表
           wx.navigateTo({
-            url: '/pages/points/main'
+            url: '/pages/commentList/main'
           })
           break
         case 'likes':
           // 进入本人的点赞列表
           wx.navigateTo({
-            url: '/pages/points/main'
+            url: '/pages/likeList/main'
+          })
+          break
+        case 'exchanges':
+          // 兑换记录
+          wx.navigateTo({
+            url: '/pages/exchangeList/main'
+          })
+          break
+        case 'faq':
+          // 常见问题
+          wx.navigateTo({
+            url: '/pages/faqList/main'
+          })
+          break
+        case 'contact':
+          // 联系我们
+          wx.navigateTo({
+            url: '/pages/contactUs/main'
+          })
+          break
+        case 'set':
+          // 设置
+          wx.navigateTo({
+            url: '/pages/set/main'
           })
           break
         default:
+          // 关于我们
+          wx.navigateTo({
+            url: '/pages/points/main'
+          })
       }
     }
 
@@ -308,7 +359,7 @@ page {
         flex-direction: row;
         height: 100rpx;
         line-height: 100rpx;
-        padding: 0 40rpx;
+        padding: 0 20rpx 0 40rpx;
         dt {
           display: inline-block;
           height: 60rpx;
@@ -325,8 +376,11 @@ page {
           flex: 1;
           font-size: 34rpx;
           span {
-            height: 40rpx;
-            width: 40rpx;
+            background: url('../../../static/img/icon/arrow_right_gray_w40_h40_1x.png') no-repeat 60rpx 30rpx;
+            background-size: 40rpx 40rpx;
+            height: 100rpx;
+            float: right;
+            width: 100rpx;
           }
         }
       }

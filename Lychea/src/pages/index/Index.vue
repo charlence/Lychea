@@ -41,6 +41,9 @@
     <!-- begin Post -->
     <Post :posts = "posts"></Post>
     <!-- end Poster -->
+    <!-- begin CustomTabBar -->
+    <CustomTabBar></CustomTabBar>
+    <!-- end CustomTabBar -->
   </div>
 </template>
 
@@ -49,6 +52,7 @@ import config from '@/config'
 import utils from '@/util'
 import Request from '@/Request'
 import CustomNavBarHome from '@/components/CustomNavBarHome'
+import CustomTabBar from '@/components/CustomTabBar'
 import Post from '@/components/Post'
 import Filter from '@/components/Filter'
 import Ranking from '@/components/index/Ranking'
@@ -97,6 +101,7 @@ export default {
   },
   components: {
     CustomNavBarHome,
+    CustomTabBar,
     Filter,
     Post,
     Ranking
