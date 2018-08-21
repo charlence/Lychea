@@ -42,7 +42,10 @@
     <Post :posts = "posts"></Post>
     <!-- end Poster -->
     <!-- begin CustomTabBar -->
-    <CustomTabBar></CustomTabBar>
+    <CustomTabBar
+      :customTabBar = "tabBarParams"
+    >
+    </CustomTabBar>
     <!-- end CustomTabBar -->
   </div>
 </template>
@@ -96,7 +99,10 @@ export default {
             '../../static/img/icon/default_user_photo_w40_h40_2x.png'
           ]
         }
-      ]
+      ],
+      tabBarParams: {
+        currentPage: '1'
+      }
     }
   },
   components: {

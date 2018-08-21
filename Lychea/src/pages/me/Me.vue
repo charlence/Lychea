@@ -129,10 +129,17 @@
     <!-- end lychea-notice -->
   </div>
   <!-- end center -->
+  <!-- begin CustomTabBar -->
+  <CustomTabBar
+    :customTabBar = "tabBarParams"
+  >
+  </CustomTabBar>
+  <!-- end CustomTabBar -->
 </div>
 </template>
 <script>
 import CustomNavBarOther from '@/components/CustomNavBarOther'
+import CustomTabBar from '@/components/CustomTabBar'
 import utils from '@/util'
 export default {
   data () {
@@ -141,11 +148,15 @@ export default {
         title: '我的',
         icon: '../../../static/img/icon/arrow_left_w30_h30_2x.png',
         backgroundYellow: true
+      },
+      tabBarParams: {
+        currentPage: '3'
       }
     }
   },
   components: {
-    CustomNavBarOther
+    CustomNavBarOther,
+    CustomTabBar
   },
   methods: {
     init () {
@@ -253,9 +264,11 @@ export default {
 <style lang="scss">
 page {
   background: #F8F8F8;
+  padding-bottom: 130rpx;
 }
 .me {
   background: #FFD220;
+
   // begin header
   .header {
     background: #fff;

@@ -27,6 +27,13 @@ let showModal = (title, content) => {
   })
 }
 
+// 封装 wx.redirectTo
+let redirectToPage = (url, obj = {}) => {
+  wx.redirectTo({
+    url: url + `${encodeSearchParams(obj)}`
+  })
+}
+
 // 封装分享卡片
 let shareCard = (title = DEFAULT.shareCard.title, path = DEFAULT.shareCard.path, cover = DEFAULT.shareCard.cover) => {
   return {
@@ -203,15 +210,16 @@ const queryToDict = (param) => {
 }
 
 const utils = {
-  showToastSuccess,
-  showModal,
+  encodeSearchParams,
   getDeviceInfo,
+  getOffsetTop,
+  queryToDict,
+  redirectToPage,
   setCustomNavBar,
   shareCard,
-  wxLogin,
-  getOffsetTop,
-  encodeSearchParams,
-  queryToDict
+  showToastSuccess,
+  showModal,
+  wxLogin
 }
 
 export default utils
